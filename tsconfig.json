@@ -11,9 +11,10 @@
 	},
 	"include": [
 		"app.ts",
-		"controllers/**/*.ts",
-		"routes/**/*.ts",
-		"interfaces/**/*.ts",
-		"models/**/*.ts"
+		"controllers/*.ts",
+		"routes/*.ts",
+		"interfaces/*.ts",
+		"models/*.ts",
+		"connectors/*.ts"
 	]
 }

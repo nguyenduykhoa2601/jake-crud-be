@@ -2,9 +2,9 @@
 	"name": "express-crud-api",
 	"version": "1.0.0",
 	"description": "A CRUD API with Express.js, Node.js, Cloudinary, and TypeScript",
-	"main": "dist/app.js",
+	"main": "app.js",
 	"scripts": {
-		"start": "ts-node app.ts",
+		"start": "node app.js",
 		"build": "tsc",
 		"dev": "nodemon app.ts"
 	},

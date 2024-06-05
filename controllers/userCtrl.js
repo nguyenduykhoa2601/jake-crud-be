@@ -13,7 +13,7 @@ const userCtrl = {
   createUser: async (req, res) => {
     try {
       const { name, age, address } = req.body;
-      const user = new User({ name, age, address });
+      const user = new User({ _id: new Date().getMilliseconds(), name, age, address });
       await user.save();
       res.status(200).json(user);
     } catch (err) {

@@ -6,62 +6,18 @@ const userSchema = new mongoose.Schema(
       type: String,
       require: true
     },
-    activated: {
-      type: Boolean,
-      default: true
-    },
-    role: {
-      type: Number,
-      default: 0,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    firstName: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    lastName: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    title: {
-      type: String,
-      trim: true
-    },
-    locationId: {
-      type: String
-    },
-    departmentId: {
-      type: String
-    },
-    contractTypeId: {
-      type: String
-    },
-    lineMangerId: {
-      type: String
-    },
-    phoneNumber: {
-      type: String
-    },
-    avatarUrl: {
+
+    address: {
       type: String,
       default: '',
     },
-    password: {
+
+    name: {
       type: String,
-      required: true,
+      default: '',
     },
-    cart: {
-      type: Array,
-      default: [],
-    },
-    firstLogin: {
-      type: Boolean,
+    age: {
+      type: String,
       default: true,
     }
   },

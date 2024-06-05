@@ -13,16 +13,9 @@ const userCtrl = {
   createUser: async (req, res) => {
     try {
       const { name, age, address } = req.body;
-      const file = req.file;
-
-      if (!file) {
-        return res.status(400).json({ error: "Avatar file is required" });
-      }
-
-      const result = await cloudinary.uploader.upload(file.path);
-      const user = new User({ name, age, avatarUrl: result.secure_url, address });
+      const user = new User({ name, age, address });
       await user.save();
-      res.status(201).json(user);
+      res.status(200).json(user);
     } catch (err) {
       if (isErrorWithMessage(err)) {
         res.status(500).json({ error: err.message });

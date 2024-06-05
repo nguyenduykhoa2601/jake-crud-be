@@ -19,7 +19,7 @@ app.use(
 // Routes
 
 app.get('/', (req, res) => {
-  res.send('Welcome to start API');
+  res.send('Welcome to CRUD API');
 });
 
 app.use('/api/user', require('./routes/userRouter'));

@@ -1,5 +1,7 @@
 const User = require("../models/userModel");
 const cloudinary = require("../connectors/cloudinary");
+const { v4: uuidv4 } = require('uuid');
+
 
 const isErrorWithMessage = (error) => {
   return (
@@ -13,7 +15,7 @@ const userCtrl = {
   createUser: async (req, res) => {
     try {
       const { name, age, address } = req.body;
-      const user = new User({ _id: new Date().getMilliseconds(), name, age, address });
+      const user = new User({ _id: new Date().getMilliseconds().toString() + uuidv4(), name, age, address });
       await user.save();
       res.status(200).json(user);
     } catch (err) {
